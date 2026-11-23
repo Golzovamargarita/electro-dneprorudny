@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Электроэпиляция — Гладкость, которая остаётся</title>
+<style>
+  :root {
+    --bg: #E0EAD6;
+    --primary: #2E7D32;
+    --secondary: #4CAF50;
+    --text: #1B1B1B;
+    --white: #FFFFFF;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+
+  /* БЛОК: HEADER */
+  header { background: var(--white); box-shadow: 0 2px 8px rgba(0,0,0,.08); }
+  .logo-banner { display: block; width: 100%; max-height: 220px; object-fit: cover; object-position: center; }
+  .header-text { padding: 1.2rem 1.5rem; max-width: 1100px; margin: 0 auto; }
+  .header-text h1 { margin: 0; color: var(--primary); font-size: 1.6rem; }
+  .tagline { margin: .4rem 0 0; font-size: 1rem; color: #555; }
+
+  section { padding: 3rem 1.5rem; max-width: 1100px; margin: 0 auto; }
+  h2 { color: var(--primary); margin-top: 0; }
+  h3 { color: var(--primary); margin: .4rem 0; font-size: 1.05rem; }
+
+  /* БЛОК: ЧТО ТАКОЕ ЭЛЕКТРОЭПИЛЯЦИЯ */
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+  .card { background: var(--white); padding: 1.4rem; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,.06); }
+  .card .icon { font-size: 1.8rem; }
+
+  /* БЛОК: ПРЕИМУЩЕСТВА СТУДИИ */
+  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+
+  /* БЛОК: ПРАЙС-ЛИСТ */
+  .price-table { width: 100%; border-collapse: collapse; background: var(--white); border-radius: 8px; overflow: hidden; }
+  .price-table th, .price-table td { border: 1px solid #DDE8D4; padding: .8rem 1rem; text-align: left; }
+  .price-table th { background: var(--primary); color: var(--white); }
+  .price-table tr:nth-child(even) td { background: #F3F8EF; }
+  .price-features { margin-top: 1.2rem; background: var(--white); padding: 1.2rem 1.5rem; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,.06); }
+  .price-features h3 { margin-top: 0; }
+  .price-features ul { list-style: none; padding: 0; margin: .6rem 0 0; }
+  .price-features li { padding: .35rem 0 .35rem 1.6rem; position: relative; }
+  .price-features li::before { content: "✔"; position: absolute; left: 0; color: var(--secondary); }
+  .cta-box { margin-top: 1.5rem; background: var(--primary); color: var(--white); padding: 1.2rem 1.5rem; border-radius: 8px; text-align: center; font-size: 1.05rem; }
+
+  /* БЛОК: КОНТАКТЫ */
+  .contacts ul { list-style: none; padding: 0; }
+  .contacts li { margin: .6rem 0; }
+  .btn { display: inline-block; margin-top: 1rem; background: var(--primary); color: var(--white); text-decoration: none; padding: .8rem 1.8rem; border-radius: 8px; transition: background .2s; }
+  .btn:hover { background: #1B5E20; }
+  .btn-max { background: var(--white); color: var(--primary); border: 2px solid var(--primary); margin-left: .8rem; }
+  .btn-max:hover { background: #F3F8EF; }
+
+  footer { background: var(--primary); color: var(--white); text-align: center; padding: 1.2rem; font-size: .9rem; }
+
+  @media (max-width: 768px) {
+    .grid-2, .grid-3 { grid-template-columns: 1fr; }
+    section { padding: 2rem 1.2rem; }
+    .header-text h1 { font-size: 1.3rem; }
+    /* На телефоне таблица превращается в аккуратные строки */
+    .price-table thead { display: none; }
+    .price-table, .price-table tbody, .price-table tr, .price-table td { display: block; width: 100%; }
+    .price-table tr { border-bottom: 2px solid #DDE8D4; }
+    .price-table tr:last-child { border-bottom: none; }
+    .price-table td { border: none; padding: .5rem 1rem; }
+    .price-table td.zone { font-weight: bold; color: var(--primary); padding-top: .8rem; }
+    .price-table td.price { font-size: 1.15rem; padding-bottom: .8rem; }
+    .btn { display: block; text-align: center; }
+    .btn-max { margin-left: 0; margin-top: .8rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- БЛОК: HEADER -->
+<header>
+  <img class="logo-banner" src="logo.png" alt="Логотип студии">
+  <div class="header-text">
+    <h1>Электроэпиляция — Гладкость, которая остаётся</h1>
+    <p class="tagline">Единственный метод, удаляющий волос навсегда — независимо от цвета и типа кожи.</p>
+  </div>
+</header>
+
+<!-- БЛОК: ЧТО ТАКОЕ ЭЛЕКТРОЭПИЛЯЦИЯ -->
+<section id="about">
+  <h2>Что такое электроэпиляция</h2>
+  <div class="grid-2">
+    <div class="card">
+      <div class="icon">⚡</div>
+      <h3>Что это</h3>
+      <p>Электроэпиляция — метод удаления волос, при котором мастер вводит в каждый фолликул тончайшую иглу и подаёт слабый электрический разряд. Ток разрушает корень волоса, после чего волосок легко удаляется пинцетом. Это единственная методика, официально признанная способом удалить волос навсегда.</p>
+    </div>
+    <div class="card">
+      <div class="icon">✅</div>
+      <h3>Преимущества метода</h3>
+      <p>Главный плюс — permanентный результат: разрушенный фолликул больше не производит волосы. Метод работает на любой зоне тела, включая лицо, и подходит даже для чувствительной кожи. Уже после нескольких сеансов зона становится заметно чище и гладче.</p>
+    </div>
+    <div class="card">
+      <div class="icon">🧬</div>
+      <h3>Для каких волос подходит</h3>
+      <p>В отличие от лазера, электроэпиляция не зависит от пигмента. Она одинаково эффективна для тёмных, светлых, рыжих, седых и пушковых волос. Работает на любой коже — светлой и тёмной, в том числе с загаром.</p>
+    </div>
+    <div class="card">
+      <div class="icon">💉</div>
+      <h3>Как проходит процедура</h3>
+      <p>Вы устраиваетесь на удобной кушетке, мастер обрабатывает зону антисептиком и по одному работает с каждым фолликулом. Ощущения терпимые, а зона заранее обеззараживается. Сеанс длится от 30 минут — точное время зависит от зоны и густоты волос.</p>
+    </div>
+  </div>
+</section>
+
+<!-- БЛОК: ПРЕИМУЩЕСТВА НАШЕЙ СТУДИИ -->
+<section id="advantages">
+  <h2>Преимущества нашей студии</h2>
+  <div class="grid-3">
+    <div class="card">
+      <div class="icon">🛠️</div>
+      <h3>Работа на совесть</h3>
+      <p>Я обрабатываю каждый волосок и не пропускаю участки. Зона считается готовой только тогда, когда результат действительно радует — а не когда «время вышло».</p>
+    </div>
+    <div class="card">
+      <div class="icon">⏱️</div>
+      <h3>Не затягиваю время</h3>
+      <p>Работаю в ровном комфортном темпе: сеанс не растягивается ради лишних минут. Вы платите только за реальную работу мастера.</p>
+    </div>
+    <div class="card">
+      <div class="icon">🧼</div>
+      <h3>Стерильность и безопасность</h3>
+      <p>Инструменты в индивидуальных крафт-пакетах, которые вскрываются прямо при вас. Одноразовые расходные материалы — на каждый сеанс.</p>
+    </div>
+    <div class="card">
+      <div class="icon">📍</div>
+      <h3>Удобное расположение</h3>
+      <p>Студия находится почти в центре города — добираться удобно из любого района. Рядом остановки и парковка.</p>
+    </div>
+    <div class="card">
+      <div class="icon">🤗</div>
+      <h3>Индивидуальный подход</h3>
+      <p>Подбираю график и план процедур под вашу кожу, волосы и ритм жизни. Отвечаю на все вопросы до, во время и после процедуры — включая домашний уход.</p>
+    </div>
+    <div class="card">
+      <div class="icon">💚</div>
+      <h3>Комфорт и уют</h3>
+      <p>В студии тихо, чисто и спокойно: чай, плед, приятная атмосфера. Многие клиентки отмечают, что сеансы проходят легче, чем ожидали.</p>
+    </div>
+  </div>
+</section>
+
+<!-- БЛОК: ПРАЙС-ЛИСТ -->
+<section id="prices">
+  <h2>Прайс-лист</h2>
+  <table class="price-table">
+    <thead>
+      <tr>
+        <th>Зона</th>
+        <th>Цена</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="zone">Подмышки</td>
+        <td class="price">от 1 800 ₽</td>
+      </tr>
+      <tr>
+        <td class="zone">Бикини</td>
+        <td class="price">от 2 500 ₽</td>
+      </tr>
+      <tr>
+        <td class="zone">Лицо</td>
+        <td class="price">от 1 350 ₽</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="price-features">
+    <h3>Важно знать</h3>
+    <ul>
+      <li><strong>Скидка 15%</strong> — на первое посещение</li>
+      <li><strong>45 ₽</strong> — стоимость минуты работы</li>
+      <li><strong>от 30 минут</strong> — минимальный сеанс</li>
+      <li><strong>Время индивидуально</strong> — зависит от зоны и густоты волос</li>
+      <li><strong>Цена «от»</strong> — итоговая стоимость зависит от объёма работы</li>
+    </ul>
+  </div>
+
+  <div class="cta-box">
+    Запишитесь на консультацию — подберём оптимальный план 💚
+  </div>
+</section>
+
+<!-- БЛОК: КОНТАКТЫ -->
+<section id="contacts" class="contacts">
+  <h2>Контакты</h2>
+  <ul>
+    <li>📍 <strong>Адрес:</strong> г. Днепрорудный, ул. Ленина, 6, подъезд 1, кв. 5</li>
+    <li>📞 <strong>Телефон:</strong> <a href="tel:+79901142182">+7 990 114-21-82</a></li>
+    <li>💬 <strong>Группа в MAX:</strong> <a href="https://max.ru/join/EDlz112azJGWhvF6VRflSRrUjqgQgHYcta7EBfwKX3Y" target="_blank" rel="noopener">Наша группа в MAX — запись и вопросы</a></li>
+  </ul>
+  <a class="btn" href="tel:+79901142182">Записаться на приём</a>
+  <a class="btn btn-max" href="https://max.ru/join/EDlz112azJGWhvF6VRflSRrUjqgQgHYcta7EBfwKX3Y" target="_blank" rel="noopener">Написать в MAX</a>
+</section>
+
+<!-- БЛОК: FOOTER -->
+<footer>
+  © 2026 Студия электроэпиляции. Все права защищены.
+</footer>
+
+</body>
+</html>
